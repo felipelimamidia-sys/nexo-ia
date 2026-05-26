@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: #FFF7F2;
+    color: #2C2C2C;
+    overflow-x: hidden;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #FFF7F2;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #D4C4B8;
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #B61F1F;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Lora', Georgia, serif;
+  }
+}
+
+@layer components {
+  .text-red-gradient {
+    background: linear-gradient(135deg, #B61F1F 0%, #C92A2A 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .btn-primary {
+    @apply px-6 py-3 font-semibold rounded-lg;
+    background: #B61F1F;
+    color: #FFF7F2;
+    transition: all 0.3s ease;
+    border: 1px solid #B61F1F;
+  }
+
+  .btn-primary:hover {
+    background: #A01818;
+    border-color: #A01818;
+    box-shadow: 0 4px 16px rgba(182, 31, 31, 0.25);
+    transform: translateY(-1px);
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 font-semibold rounded-lg;
+    background: transparent;
+    color: #B61F1F;
+    border: 1.5px solid #B61F1F;
+    transition: all 0.3s ease;
+  }
+
+  .btn-secondary:hover {
+    background: rgba(182, 31, 31, 0.05);
+    box-shadow: 0 2px 8px rgba(182, 31, 31, 0.1);
+  }
+
+  .card {
+    @apply rounded-xl p-6;
+    background: #FFFFFF;
+    border: 1px solid #E8D4C4;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+  }
+
+  .card:hover {
+    border-color: #D4C4B8;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  }
+
+  .card-premium {
+    @apply rounded-xl p-6;
+    background: #FFFFFF;
+    border: 1px solid #E8D4C4;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+  }
+
+  .card-premium:hover {
+    border-color: #B61F1F;
+    box-shadow: 0 8px 40px rgba(182, 31, 31, 0.08);
+    transform: translateY(-2px);
+  }
+
+  .serif-heading {
+    font-family: 'Lora', Georgia, serif;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+
+  .section-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(182, 31, 31, 0.12), transparent);
+  }
+
+  .academic-frame {
+    border: 2px solid #B61F1F;
+    border-radius: 2px;
+    padding: 32px;
+    background: #FFFFFF;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  }
+}
+
+@layer utilities {
+  .border-subtle {
+    border-color: #E8D4C4;
+  }
+
+  .border-academic {
+    border: 2px solid #B61F1F;
+  }
+}
